@@ -1,31 +1,22 @@
 (function () {
-'use strict';
-
-angular.module('LunchCheck', [])
-.controller('MyFirstController', function () {
-  function splitString(stringToSplit, separator) {
-    const arrayOfStrings = stringToSplit.split(separator)
-    console.log('The array has ', arrayOfStrings.length, ' elements: ', arrayOfStrings.join(' / '))
+  'use strict';
+  angular.module('LunchCheck', [])
+  .controller('LunchCheckController', LunchCheckController)
+  
+  LunchCheckController.$injector = ["$scope"];
+  function LunchCheckController ($scope) {
+    $scope.message = "";
+    $scope.check = function () {
+      if ($scope.input_string === undefined || $scope.input_string === "") {
+        $scope.message = "Please enter data first"
+      } else {
+        let res = $scope.input_string.split(",").length;
+        if(res <= 3 && res >= 1) {
+          $scope.message = "Enjoy!"
+        } else if (res > 3) {
+          $scope.message = "Too much!"
+        }
+      }
     }
-    const itemString = 'item1,item2,item3,'
-
-    const space = ' '
-    const comma = ','
-
-  splitString(itemString, comma)
-
-
-});
-
-MsgController.$inject = ['$scope'];
-function MsgController ($scope) {
-  $scope.placeholder = 'items';
-  $scope.sayMessage = function () {
-    return "Enjoy!";
-
-  }
   };
-
-
-
 })();
