@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="NarrowItDownApp">
+  <head>
+    <title>Narrow Down Your Menu Choice</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
+    <div
+      class="container"
+      ng-controller="NarrowItDownController as searchController"
+    >
+      <h1>Narrow Down Your Chinese Menu Choice</h1>
+
+      <p class="alert alert-info">
+        Type "some" in the input so that you can see it send request to the
+        backend api. This is just for demo purpose. Type anything valid.
+      </p>
+      <div class="form">
+        <div class="form-group">
+          <input
+            type="text"
+            ng-model="searchController.searchTerm"
+            placeholder="search term"
+            class="form-control">
+        </div>
+        <div class="form-group narrow-button">
+          <button
+            ng-click="searchController.getMatchedMenuItems();"class="btn btn-primary">
+            Narrow It Down For Me!</button>
+        </div>
+      </div>
+
+      <!-- Bonus loader (see Bonus section of the assignment) -->
+      <items-loader-indicator></items-loader-indicator>
+
+      <!-- found-items should be implemented as a component -->
+      <div ng-if="searchController.found.length == 0" class="emptyMessage">Nothing found.</div>
+      <div ng-if="searchController.found.length != 0" class="tableView">
+        <table class="table table-striped table-hover">
+          <thead>
+            <th>Short Name</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th class="nosort"></th>
+          </thead>
+          <tbody>
+            <tr ng-repeat="item in searchController.found">
+              <td>{{item.short_name}}</td>
+              <td>{{item.name}}</td>
+              <td>{{item.description}}</td>
+              <td>
+                <button ng-click="searchController.removeItem(index)">
+                  Don't want this one!
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
