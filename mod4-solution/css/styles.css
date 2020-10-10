@@ -1,0 +1,44 @@
+body {
+  font-size: 1.2em;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+  display: none;
+}
+
+.loading-icon {
+  position: absolute;
+  left: 50%;
+  top: 10px;
+}
+
+#b2,#b1,#b0 {
+  margin-left: 20px;
+
+}
+#b0:hover {
+  background-color: red;
+  color: white;
+  cursor: pointer;
+
+}
+#b1:hover {
+  background-color: red;
+  color: white;
+  cursor: pointer;
+
+}
+#b2:hover {
+  background-color: red;
+  color: white;
+  cursor: pointer;
+
+}
+
+li[ui-sref]:hover {
+  font-weight: bold;
+  cursor: pointer;
+
+}
