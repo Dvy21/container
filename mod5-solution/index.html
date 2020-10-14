@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -50,13 +51,13 @@
                 <a ui-sref="public.menu">
                   <span class="glyphicon glyphicon-cutlery"></span><br class="hidden-xs"> Menu</a>
               </li>
-              <li ui-sref-active="active">
-                <a ui-sref="public.info">
+              <li>
+                <a ui-sref="public.userpage">
                   <span class="glyphicon glyphicon-info-sign"></span><br class="hidden-xs"> My Info</a>
               </li>
-              <li ui-sref-active="active">
-                <a ui-sref="public.signup">
-                  <span class="glyphicon glyphicon-certificate"></span><br class="hidden-xs"> sign up</a>
+              <li>
+                <a ui-sref="public.subscribe">
+                  <span class="glyphicon glyphicon-certificate"></span><br class="hidden-xs"> Sign Up</a>
               </li>
               <li id="phone" class="hidden-xs">
                 <a href="tel:410-602-5008">
@@ -124,6 +125,7 @@
     <script src="src/common/loading/loading.component.js"></script>
     <script src="src/common/loading/loading.interceptor.js"></script>
     <script src="src/common/menu.service.js"></script>
+    <script src="src/common/subscribers.service.js"></script>
 
     <!-- Public Module -->
     <script src="src/public/public.module.js"></script>
@@ -132,9 +134,9 @@
     <script src="src/public/menu-category/menu-category.component.js"></script>
     <script src="src/public/menu-items/menu-items.controller.js"></script>
     <script src="src/public/menu-item/menu-item.component.js"></script>
-    <script src="src/public/signup/signup.controller.js"></script>
-    <script src="src/public/info/info.controller.js"></script>
-
+    <script src="src/public/subscribe/subscribe-form.controller.js"></script>
+    <script src="src/public/subscribe/validator-menuitem.directive.js"></script>
+    <script src="src/public/user-page/user-page.controller.js"></script>
 
     <!-- ADMIN SITE -->
 

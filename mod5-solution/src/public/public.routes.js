@@ -41,17 +41,28 @@ function routeConfig ($stateProvider) {
         }]
       }
     })
-    .state('public.signup', {
-      url: '/signup',
-      templateUrl: 'src/public/signup/signup.html',
-      controller: 'SignupController',
-      controllerAs: 'signupCtrl'
-    })
-    .state('public.info', {
-      url: '/info',
-      templateUrl: 'src/public/info/info.html',
-      controller: 'InfoController',
-      controllerAs: 'infoCtrl'
-    });
+    .state('public.subscribe', {
+     url: '/subscribe',
+     templateUrl: 'src/public/subscribe/subscribe-form.html',
+     controller: 'SubscribeFormController as subscribeCtrl'
+   })
+     .state('public.userpage', {
+       url: '/user',
+       templateUrl: 'src/public/user-page/user-page.html',
+       controller: 'UserPageController as userPageCtrl',
+       resolve: {
+         user: ['SubscribersService', function (SubscribersService) {
+           return SubscribersService.getLastSubscriber();
+         }],
+         menuItem: ['SubscribersService', 'MenuService', function (SubscribersService, MenuService) {
+           var user = SubscribersService.getLastSubscriber();
+           if (user === undefined) {
+             return undefined;
+           }
+           var shortName = user.favoriteDish;
+           return MenuService.getItem(shortName);
+         }]
+       }
+     })
 }
 })();

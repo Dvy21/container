@@ -27,12 +27,10 @@ function MenuService($http, ApiPath) {
     });
   };
 
-  service.getFavoriteDish = function(short_name) {
-   return $http.get(ApiPath + '/menu_items/' + short_name + '.json');
- }
-
+  service.getItem = function(shortName) {
+    return $http.get(ApiPath + '/menu_items/' + shortName + '.json').then(function (response) {
+        return response.data;
+    });
+  };
 }
-
-
-
 })();

@@ -1,0 +1,36 @@
+<div class="container">
+    <form name="subscribeform" class="subscribe-form">
+        <input type="text" name="firstname" placeholder="First name"
+               ng-model="subscribeCtrl.firstName"
+               required
+               minlength="2"
+               maxlength="25">
+        <input type="text" name="lastname" placeholder="Last name"
+               ng-model="subscribeCtrl.lastName"
+               required
+               minlength="2"
+               maxlength="25">
+
+        <input type="email" name="email" placeholder="Email"
+               ng-model="subscribeCtrl.email"
+               required>
+
+        <input type="text" name="phone" placeholder="Phone (10 digits)"
+               ng-model="subscribeCtrl.phone"
+               required
+               pattern="(\d{10})">
+
+        <input type="text" name="favoritedish" placeholder="Favorite dish (short name)"
+               required
+               ng-model="subscribeCtrl.favoriteDish"
+               menu-input>
+
+               Note: protection BEFORE submitting has been implemented.
+
+        <button
+                ng-disabled="subscribeform.$invalid"
+                ng-click="subscribeCtrl.save()">Submit</button>
+    </form>
+    <span class="error" ng-if="subscribeCtrl.dishError">Your dish was not found in the menu!</span>
+    <span class=success" ng-if="subscribeCtrl.success">Your details were saved successfully.</span>
+</div>
