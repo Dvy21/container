@@ -5,35 +5,23 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
+    <title>web4exsolution</title>
     <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/restaurant.css">
-    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/styles.css">
   </head>
-  <body ng-app="restaurant" ng-strict-di>
-
-    <!-- Fixed position loading indicator -->
-    <loading class="loading-indicator"></loading>
-
-    <header>
+  <body>
+   <header>
       <nav id="header-nav" class="navbar navbar-default">
         <div class="container">
           <div class="navbar-header">
-            <a href="index.html" class="pull-left visible-md visible-lg">
-              <div id="logo-img" alt="Logo image"></div>
-            </a>
 
             <div class="navbar-brand">
-              <a href="index.html"><h1>David Chu's China Bistro</h1></a>
-              <p>
-              <img src="images/star-k-logo.png" alt="Kosher certification">
-              <span>Kosher Certified</span>
-              </p>
+              <a href="index.html"><img src="images/web4exlogo.png" width="400" height="100"></a>
             </div>
 
-            <button id="navbarToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+            <button id="navbarToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="true">
               <span class="sr-only">Toggle navigation</span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
@@ -43,104 +31,325 @@
 
           <div id="collapsable-nav" class="collapse navbar-collapse">
             <ul id="nav-list" class="nav navbar-nav navbar-right">
-              <li id="navHomeButton" class="visible-xs">
-                <a href="index.html">
-                  <span class="glyphicon glyphicon-home"></span> Home</a>
-              </li>
               <li id="navMenuButton" ui-sref-active="active">
-                <a ui-sref="public.menu">
-                  <span class="glyphicon glyphicon-cutlery"></span><br class="hidden-xs"> Menu</a>
-              </li>
-              <li>
-                <a ui-sref="public.userpage">
-                  <span class="glyphicon glyphicon-info-sign"></span><br class="hidden-xs"> My Info</a>
-              </li>
-              <li>
-                <a ui-sref="public.subscribe">
-                  <span class="glyphicon glyphicon-certificate"></span><br class="hidden-xs"> Sign Up</a>
-              </li>
-              <li id="phone" class="hidden-xs">
-                <a href="tel:410-602-5008">
-                  <span>410-602-5008</span></a><div>* We Deliver</div>
+                    <li><a href="#home-section" class="nav-link">Home</a></li>
+                    <li><a href="#what-we-do-section" class="nav-link">What We Do</a></li>
+                    <li><a href="#about-section" class="nav-link">About Us</a></li>
+                    <li><a href="#portfolio-section" class="nav-link">Portfolio</a></li>
+                    <li><a href="#contact-section" class="nav-link">Location</a></li>
+                    <li><a href="#contact-section" class="nav-link">Contact</a></li>
               </li>
             </ul><!-- #nav-list -->
           </div><!-- .collapse .navbar-collapse -->
         </div><!-- .container -->
       </nav><!-- #header-nav -->
     </header>
-
-    <div id="call-btn" class="visible-xs">
-      <a class="btn" href="tel:410-602-5008">
-        <span class="glyphicon glyphicon-earphone"></span>
-        410-602-5008
-      </a>
     </div>
-    <div id="xs-deliver" class="text-center visible-xs">* We Deliver</div>
+    <div class="container">
+     <div class="jumbotron">
+        <a href="index.html"><img src="images/image.jpg" width="1000" height="600"></a>
+    </div>
+  </div>
+       
 
-    <ui-view>
-      <div class="text-center initial-loading">
-        <h2>Loading Site...</h2>
-      </div>
-    </ui-view>
+        <h2 class="title">Our Services</h2>
+        <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+                  <h3>Web Design</h3>
+                  <p> Our designer design a user-interface that flows freely, allowing users to navigate easily and find what you need quickly and efficiently.</p>
+               </div>
+              <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+                  <h3>Development</h3>
+                  <p>We are develop an accurate and flexible model describing project & we are providing services to enterprises across the world and marketing needs.</p>
+                  
+                </div>
+              <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+                  <h3>eCommerce</h3>
+                  <p>Our ecommerce website developers build responsive, search-engine friendly, and secure eCommerce stores. As a result, the easy-to-navigate user interface attracts more customers to search & buy their favorite products from your website or mobile app.</p>
+                  
+                </div>
 
-    <footer class="panel-footer">
+              <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+                  <h3>Application Development</h3>
+                  <p>We have technically skilled and enthusiastic developers who will give you the best and most simple application to fulfill your business needs. Our teams of developers are also experts in developing native Apps also cross-platform Apps that can be launched on Smartphone’s and hand-held devices.</p>
+                  
+                </div>
+              <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+                  <h3>Web Hosting</h3>
+                  <p>All of our hosting packages include the industry leading control panel which means it's super easy for you to manage your own website without having to rely on experts!</p>
+                  
+                </div>
+              <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
+                  <h3>Search Engine Optimization</h3>
+                  <p>Team of SEO specialists help you build a plan of attack that optimises your organic rankings for key search queries, our SEM team can create and deploy paid ad campaigns that drive traffic, leads and revenue for your brand.</p>
+
+                </div>
+                  
+              </div>
+              <hr>
+
+    <div class="site-section" id="about-section">
       <div class="container">
         <div class="row">
-          <section id="hours" class="col-sm-4">
-            <span>Hours:</span><br>
-            Sun-Thurs: 11:15am - 10:00pm<br>
-            Fri: 11:15am - 2:30pm<br>
-            Saturday Closed
-            <hr class="visible-xs">
-          </section>
-          <section id="address" class="col-sm-4">
-            <span>Address:</span><br>
-            7105 Reisterstown Road<br>
-            Baltimore, MD 21215
-            <p>* Delivery area within 3-4 miles, with minimum order of $20 plus $3 charge for all deliveries.</p>
-            <hr class="visible-xs">
-          </section>
-          <section id="testimonials" class="col-sm-4">
-            <p>"The best Chinese restaurant I've been to! And that's saying a lot, since I've been to many!"</p>
-            <p>"Amazing food! Great service! Couldn't ask for more! I'll be back again and again!"</p>
-          </section>
+          <div class="col-lg-6 mb-5">
+            <img src="images/image1.jpg" alt="Image" class="img-fluid" width="550" height="400">
+          </div>
+          <div class="col-lg-5 ml-auto section-title">
+            <span class="sub-title">Acquaint Us</span>
+            <h2 class="title">About us</h2>
+            <p>Over one year we've fostered great relationships with our clients. We've always focused on making websites better for everyone, so our clients can focus on what they do best: selling their products and services. Today, web4ex solution is a tight-knit team of energetic web developers with a passion for getting great results. We provide personal, local service to our clients from all over the India.</p>
+
+
+            <div class="d-flex">
+              <ul class="list-unstyled">
+                <li>Design</li>
+                <li>Development</li>
+                <li>eCommerce</li>
+              </ul>
+              <ul class="list-unstyled">
+                
+                <li>Mobile Apps</li>
+                <li>Web Hosting</li>
+                <li>SEO</li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div class="text-center">
-          &copy; Copyright David Chu's China Bistro 2016 |
-          <a ui-sref="admin.auth">Admin</a></div>
+      </div>
+    </div>
+    <hr>
+
+    <div class="site-section" id="what-we-do-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 ">
+            <h2 class="title">Objectives and Goals</h2>
+            
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <img src="images/mission.png" alt="Image" class="img-fluid" width="500" height="300">
+
+            <div class="row">
+              <div class="col-lg-10">
+                <div class="pr-lg-5">
+                  <h3>Our Mission</h3>
+                    <p> We build a product and provide a services more than what you expected.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <img src="images/vision.png" alt="Image" class="img-fluid" width="500" height="300">
+           
+            <div class="row">
+              <div class="col-lg-10">
+                <div class="pr-lg-5">
+                  <h3>Our Vision</h3>
+                    <p>To provide a responsible services and aim to fullfill the customer requirements by using latest technology</p>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <hr>
+
+    <div class="site-section" id="portfolio-section">
+      <div class="container">
+        <div class="row mb-5 ">
+          <div class="col-md-7 section-title">
+            <span class="sub-title">Recent Works</span>
+            <h2 class="title">Our Clients</h2>
+          </div>
+        </div>
+        <div class="row mb-5">
+          <div class="col-lg-4 text-center mb-4 mb-lg-0">
+            <img src="images/gym.jpg" alt="Image" class="img-fluid text-center" width="100px" height="100px">
+          </div>
+          <div class="col-lg-8">
+            <h3 class="client-heading">Worlds Gym Fitness</h3>
+            <p class="mb-4">We done a dynamic website with  mobile responsive by using a latest technology and we provided the digital marketing to explore their training works among the people</p>
+          </div>
+        </div>
+
+        <div class="row mb-5">
+          <div class="col-lg-4 text-center mb-4 mb-lg-0">
+            <img src="images/loan1.png" alt="Image" class="img-fluid text-center" width="100px" height="100px">
+          </div>
+          <div class="col-lg-8">
+            <h3 class="client-heading">Easy Loan Care</h3>
+            <p>Easy loan care is loan service provider,we done a creative dynamic website by using latest technology and also provided a digital marketing to explore their loan services among the people </p>
+          </div>
+        </div>
+
+            
+          <div class="row mb-5">
+          <div class="col-lg-4 text-center mb-4 mb-lg-0">
+            <img src="images/ras.png" alt="Image" class="img-fluid img-fluid-odd text-center"  width="100px" height="100px">
+          </div>
+          <div class="col-lg-8">
+            <h3 class="client-heading">RAS security & Allied Service</h3>
+            <p>RAS Security & Allied Service is a man power security service company,we done static website with mobile responsive and also provided a digital marketing to explore their man power services among the people</p>
+          </div>
+        </div>
+        <div class="row mb-5">
+          <div class="col-lg-4  text-center mb-4 mb-lg-0">
+            <img src="images/albeck.jpg" alt="Image" class="img-fluid" width="100px" height="100px">
+          </div>
+          <div class="col-lg-8">
+            <h3 class="client-heading">AL-Beck Resturant</h3>
+            <p>AL-Beck Resturant is a food resturant,we done a dynamic website with table booking and online order features by using latest technology and also provided a digital marketing to explore their man power services among the people </p>
+          </div>
+        </div>
+
+          </div>
+        </div>
+        <hr>
+      <div class ="container">
+        <div class="row">
+          <section id="address" class="col-sm-6">
+            <span>Address</span><br>
+             No.12, Kannathasan Street, Shanmuga Nagar
+             Kundrathur Main Road, Madhanandhapuram
+             Porur, Chennai-600 125, India
+             <br><span>Contact:</span>
+               +91 8056296172
+               +91 9677024946
+            <br><span>Email Address:</span>
+               info@web4exsolution.com
+             </section>
+          <section id="location"  class="col-sm-6">
+            <span>Location</span><br>
+            <a href="https://goo.gl/maps/sF5UYMtJdhLiZfTp6" target="_blank">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.2086892858647!2d80.14363761482254!3d13.022378490822556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5260f9b3a82569%3A0x3719ba157816c308!2sWEB4EX%20SOLUTION!5e0!3m2!1sen!2sin!4v1609993043961!5m2!1sen!2sin" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          
+            </section>
+           </div>
+         </a>
+       </div>
+        <hr>
+        <div class="site-section" id="contact-section">
+      <div class="container">
+        <form class="contact-form" method="POST">
+
+          <div class="section-title text-center mb-5">
+            <span class="sub-title">Get In Touch</span>
+            <h2 class="title">Contact Us</h2>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <input type="text" class="form-control" name="fname" placeholder="First name">
+            </div>
+
+            <div class="col-md-6">
+              <input type="text" class="form-control" name="lname" placeholder="Last name">
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-md-12">
+              <input type="text" class="form-control" name="email" placeholder="Email">
+            </div>
+          </div>
+          <br>
+           <div class="row">
+            <div class="col-md-12">
+              <input type="text" class="form-control" name="phone" placeholder="Phone Number">
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-md-12">
+             <textarea class="form-control" name="message" id="message" cols="20" rows="10" placeholder="Message">
+              </textarea>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary">Send Message</button>
+            </div>
+          </div><br>
+            
+        </form>
+      </div>
+    </div>
+
+     <footer class="panel-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-5 mb-lg-0">
+            <div class="row mb-5">
+              <div class="col-12">
+                <h3 class="footer-heading mb-4">About Us</h3>
+                <p class="text-primary">Web4ex solution is a tight-knit team of energetic web developers with a passion for getting great results. We provide personal, local service to our clients from all over the India.</p>
+              </div>
+            </div>
+            
+
+            
+          </div>
+          <div class="col-lg-3 ml-auto">
+           
+            <div class="row mb-5">
+              <div class="col-md-12">
+                <h3 class="footer-heading mb-4">Navigation</h3>
+              </div>
+              <div class="col-md-6 col-lg-6">
+                <ul class="list-unstyled">
+                  <li><a href="#home-section" class="smoothscroll">Home</a></li>
+                  <li><a href="#what-we-do-section" class="smoothscroll">What We Do</a></li>
+                  <li><a href="#about-section" class="smoothscroll">About Us</a></li>
+                  <li><a href="#team-section"  class="smoothscroll">Location</a></li>
+                </ul>
+              </div>
+              
+            </div>
+            
+          </div>
+          
+
+          <div class="col-lg-4 mb-5 mb-lg-0">
+
+            <div class="mb-5">
+              <h3 class="footer-heading mb-2">Get in touch</h3>
+              
+
+              <form method="POST" class="form-subscribe" action="/getintouch">
+                
+                <div class="form-group mb-3">
+                  <input type="text" class="form-control border-white text-white bg-transparent" name="email" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                  <button class="btn btn-primary" type="submit">submit</button>
+                </div>
+              </form>
+
+            </div>
+          </div>
+          
+        </div>
       </div>
     </footer>
+  </div>
+</section>
+</div>
+</div>
+
+
 
     <!-- Libs -->
     <script src="lib/jquery-2.1.4.min.js"></script>
     <script src="lib/bootstrap.min.js"></script>
-    <script src="lib/angular.min.js"></script>
-    <script src="lib/angular-ui-router.min.js"></script>
+    
 
-    <!-- Main Restaurant Module -->
-    <script src="src/restaurant.module.js"></script>
 
-    <!-- Common Module -->
-    <script src="src/common/common.module.js"></script>
-    <script src="src/common/loading/loading.component.js"></script>
-    <script src="src/common/loading/loading.interceptor.js"></script>
-    <script src="src/common/menu.service.js"></script>
-    <script src="src/common/subscribers.service.js"></script>
-
-    <!-- Public Module -->
-    <script src="src/public/public.module.js"></script>
-    <script src="src/public/public.routes.js"></script>
-    <script src="src/public/menu/menu.controller.js"></script>
-    <script src="src/public/menu-category/menu-category.component.js"></script>
-    <script src="src/public/menu-items/menu-items.controller.js"></script>
-    <script src="src/public/menu-item/menu-item.component.js"></script>
-    <script src="src/public/subscribe/subscribe-form.controller.js"></script>
-    <script src="src/public/subscribe/validator-menuitem.directive.js"></script>
-    <script src="src/public/user-page/user-page.controller.js"></script>
-
-    <!-- ADMIN SITE -->
-
-    <!--Application files -->
 
   </body>
 
