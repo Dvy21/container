@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background: #ddd;
+  font-family: Arial;
+}
+.contacts {
+  display: flex;
+  flex-wrap: wrap;
+}
+.contact {
+  width: calc(50% - 40px);
+  margin: 20px;
+  background: #fff;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+.contact-image {
+  width: 30%;
+  padding: 10px;
+}
+.contact-image img {
+  display: block;
+  
+  max-width: 100%;
+}
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  float: right;
+  padding: 8px 18px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.contact-data {
+  flex: 1;
+  padding: 10px;
+}
